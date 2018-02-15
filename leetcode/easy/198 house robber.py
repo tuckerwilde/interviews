@@ -15,8 +15,7 @@ def rob(num):
         # this is because of the limitation set out, where we cannot rob two adjacent houses.
         # adjacent = max(max_3_house_before + cur, max_2_house_before + cur)
         max_3_house_before, max_2_house_before, adjacent = \
-            max_2_house_before, adjacent, max(max_3_house_before+cur, max_2_house_before+cur)
-
+            max_2_house_before, adjacent, max(max_3_house_before + cur, max_2_house_before + cur)
 
     # This reflects that limitation, we either do the two steps before, or the single step before.
     return max(max_2_house_before, adjacent)
